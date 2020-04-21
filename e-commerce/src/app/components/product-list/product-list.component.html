@@ -1,1 +1,16 @@
-<p>product-list works!</p>
+<table class="table table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th  class="text-center">Price</th>
+            <th  class="text-center">Units in stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+           <td> {{product.name}}: </td>
+           <td  class="text-center">{{product.unitPrice | currency:'EUR'}}</td>
+           <td  class="text-center">{{ product.unitsInStock }}</td>
+        </tr>
+    </tbody>
+</table>
